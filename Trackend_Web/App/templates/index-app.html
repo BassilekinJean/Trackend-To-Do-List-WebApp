@@ -20,11 +20,11 @@
                     </svg></span><span>TrackEnd</span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-1" class="navbar-toggler" data-bs-spy="scroll" data-bs-smooth-scroll="true"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" data-bss-hover-animate="pulse"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index-app.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url "index" %}">Home</a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link nav-link" href="#features-page">Fonctionnalités</a></li>
-                </ul><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="pulse" href="login.html">Connexion</a>
+                </ul><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="pulse" href="{% url "login" %}">Connexion</a>
             </div>
         </div>
     </nav>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div data-aos="fade-left" style="min-height: 300px;margin: 10px;" src="phone-screen.jpg" class="w-100 fit-cover"><img src="{% static "image/1.jpg" %}" width="300" height="469"></div>
+                    <div data-aos="fade-left" style="min-height: 300px;margin: 10px;" src="phone-screen.jpg" class="w-100 fit-cover"><img src="{% static "image/5.jpg" %}" width="300" height="469"></div>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" data-aos="fade-right" style="max-width: 900px;">
-                <div class="col mb-5"><img class="rounded img-fluid shadow" src="{% static "image/4.jpg" %}" style="border-radius: 0px;"></div>
+                <div class="col mb-5"><img class="rounded img-fluid shadow" src="{% static "image/acceuil.jpg" %}" style="border-radius: 0px;"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5" style="background: rgb(87,171,231);border-radius: 24px;">
                     <div>
                         <h5 class="fw-bold">Créer des tâches en quelques clic</h5>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" data-aos="fade-left" style="max-width: 900px;">
-                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" height="532" width="426" src="{% static "image/1.jpg" %}"></div>
+                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" height="532" width="426" src="{% static "image/supprimer.jpg" %}"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5" style="background: #aceddd;border-radius: 17px;">
                     <div>
                         <h5 class="fw-bold">Supprimer des tâches&nbsp;</h5>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" data-aos="fade-right" style="max-width: 900px;">
-                <div class="col mb-5"><img class="rounded img-fluid shadow" src="{% static "image/2.jpg" %}"></div>
+                <div class="col mb-5"><img class="rounded img-fluid shadow" src="{% static "image/modifier.jpg" %}"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5" style="background: #f3d5cc;border-radius: 16px;">
                     <div>
                         <h5 class="fw-bold">Modifier &amp; Mise à jour</h5>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" data-aos="fade-left" style="max-width: 900px;">
-                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" height="532" width="426" src="{% static "image/3.jpg" %}"></div>
+                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" height="532" width="426" src="{% static "image/notifications.jpg" %}"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5" style="background: #aceddd;border-radius: 17px;">
                     <div>
                         <h5 class="fw-bold">Recevez des notifications de rappel</h5>
