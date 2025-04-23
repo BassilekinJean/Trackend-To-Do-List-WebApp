@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App'
+    'App',
+    'admin'
 ]
 
 MIDDLEWARE = [
@@ -135,5 +136,13 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 
+# Configuration des emails (pour le reset password)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Pour tester en local
+DEFAULT_FROM_EMAIL = 'gp@gmail.com'
 
-
+#Configuration de l'authentification
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+#     'allauth.account.auth_backends.AuthenticationBackend',
+# ]
+AUTH_USER_MODEL = 'auth.User'

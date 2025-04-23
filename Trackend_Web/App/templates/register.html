@@ -42,8 +42,9 @@
                             </div>
                             <h3>New to ThemeKit</h3>
                             <p>Join us today! It takes only few steps</p>
-                            <form action="./themekit/index.html">
-                                <div class="form-group">
+                            <form id="register-form" action="{% url 'register_treat' %}" method="post">
+                                {% csrf_token %}
+                                {% comment %} <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Email" required="">
                                     <i class="ik ik-user"></i>
                                 </div>
@@ -62,9 +63,10 @@
                                             <span class="custom-control-label">&nbsp;I Accept <a href="#">Terms and Conditions</a></span>
                                         </label>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
+                                {{ form.as_p }}
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-theme">Creer un compte</button>
+                                    <button type="submit" class="btn btn-theme">Creer un compte</button>
                                 </div>
                             </form>
                             <div class="register">
