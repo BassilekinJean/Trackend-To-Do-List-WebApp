@@ -6,6 +6,7 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     nom = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)  # Champ optionnel pour l'avatar
 
     def _str_(self):
         return self.nom
