@@ -66,8 +66,8 @@ def password_reset_request(request):
                     'token': default_token_generator.make_token(user),
                     'protocol': 'http',
                 }
-                email_content = render_to_string(email_template_name, c)
-                send_mail(subject, email_content, DEFAULT_FROM_EMAIL, [user.email])
+                #email_content = render_to_string(email_template_name, c)
+                #send_mail(subject, email_content, DEFAULT_FROM_EMAIL, [user.email])
                 return redirect('password_reset_done')
     else:
         form = PasswordResetForm()
@@ -95,6 +95,9 @@ def password_reset_confirm(request, uidb64, token):
 
 # Vue pour confirmer que le mot de passe a été réinitialisé
 def password_reset_complete(request):
+    return render(request, 'forgot-password.html')
+
+def password_reset_done(request):
     return render(request, 'forgot-password.html')
 
 # Create your views here.
