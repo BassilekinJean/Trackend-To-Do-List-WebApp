@@ -20,6 +20,49 @@
         <link rel="stylesheet" href="{% static "./themekit/node_modules/perfect-scrollbar/css/perfect-scrollbar.css"%}">
         <link rel="stylesheet" href="{% static "./themekit/dist/css/theme.min.css"%}">
         <script src="{% static "./themekit/src/js/vendor/modernizr-2.8.3.min.js"%}"></script>
+    <style>
+        /* Conteneur principal */
+.avatar-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Prévisualisation de l'avatar */
+.avatar-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Forme circulaire */
+    background-color: #f0f0f0; /* Couleur de fond par défaut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Icône d'appareil photo */
+.camera-icon {
+    font-size: 40px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol de l'icône */
+.avatar-preview:hover .camera-icon {
+    transform: scale(1.2);
+}
+
+/* Image de prévisualisation */
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    </style>
     </head>
 
     <body>
@@ -40,20 +83,30 @@
                             <div class="logo-centered">
                                 <a href="./themekit/index.html"><img src="{% static "./themekit/src/img/brand.svg"%}" alt=""></a>
                             </div>
-                            <h3>New to ThemeKit</h3>
-                            <p>Join us today! It takes only few steps</p>
-                            <form id="register-form"  method="post">
+                            
+                            <form id="register-form" method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
+                                <!-- Prévisualisation de l'avatar -->
+    <div class="avatar-preview-container">
+        <div class="avatar-preview">
+            <i class="fas fa-camera camera-icon"></i>
+        </div>
+        <input type="file" name="avatar" id="avatar-input" accept="image/*" style="display: none;">
+    </div>
                                  <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email" required="">
+                                    <input type="text" name="username" class="form-control" placeholder="Email" required>
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="">
+                                    <input type="text" name="email" class="form-control" placeholder="Email" required>
+                                    <i class="ik ik-user"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password1" class="form-control" placeholder="Password" required>
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password" required="">
+                                    <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required>
                                     <i class="ik ik-eye-off"></i>
                                 </div>
                                 <div class="row">
@@ -94,5 +147,34 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const avatarInput = document.getElementById('avatar-input');
+                const avatarPreview = document.querySelector('.avatar-preview');
+            
+                // Ajouter un écouteur d'événements sur le conteneur de prévisualisation
+                avatarPreview.addEventListener('click', function () {
+                    avatarInput.click(); // Déclencher le sélecteur de fichier
+                });
+            
+                // Gérer la prévisualisation de l'image sélectionnée
+                avatarInput.addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            // Créer une image à partir du fichier sélectionné
+                            const img = document.createElement('img');
+                            img.src = e.target.result;
+            
+                            // Nettoyer le contenu précédent
+                            avatarPreview.innerHTML = '';
+                            avatarPreview.appendChild(img);
+                        };
+                        reader.readAsDataURL(file); // Lire le fichier comme une URL
+                    }
+                });
+            });
+            </script>
     </body>
 </html>
