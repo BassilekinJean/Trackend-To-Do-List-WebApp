@@ -132,7 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
 # gestion des login et logout des utilisateurs
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'index_1'
 LOGOUT_REDIRECT_URL = 'index'
 
 # Configuration des emails (pour le reset password)
