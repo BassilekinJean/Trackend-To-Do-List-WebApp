@@ -1,947 +1,715 @@
-{% load static %}
+{ % load static % }
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Gp Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="{% static "assets/img/favicon.png"%}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{% static "assets/vendor/bootstrap/css/bootstrap.min.css"%}" rel="stylesheet">
-  <link href="{% static "assets/vendor/bootstrap-icons/bootstrap-icons.css"%}" rel="stylesheet">
-  <link href="{% static "assets/vendor/aos/aos.css"%}" rel="stylesheet">
-  <link href="{% static "assets/vendor/swiper/swiper-bundle.min.css"%}" rel="stylesheet">
-  <link href="{% static "assets/vendor/glightbox/css/glightbox.min.css"%}" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="{% static "assets/css/main.css"%}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Gp
-  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-  * Updated: Aug 15 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Gp Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="{% static " assets/img/favicon.png "%}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static " assets/vendor/bootstrap/css/bootstrap.min.css "%}" rel="stylesheet">
+    <link href="{% static " assets/vendor/bootstrap-icons/bootstrap-icons.css "%}" rel="stylesheet">
+    <link href="{% static " assets/vendor/aos/aos.css "%}" rel="stylesheet">
+    <link href="{% static " assets/vendor/swiper/swiper-bundle.min.css "%}" rel="stylesheet">
+    <link href="{% static " assets/vendor/glightbox/css/glightbox.min.css "%}" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="{% static " assets/css/main.css "%}" rel="stylesheet">
+    <!--=======================================================* Template Name: Gp * Template URL: https: //bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+* Updated: Aug 15 2024 with Bootstrap v5.3.3 * Author: BootstrapMade.com * License: https: //bootstrapmade.com/license/
+========================================================-->
 </head>
 
 <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt="">-->
+                <h1 class="sitename">GP</h1><span>.</span></a>
+            <nav id="navmenu" class="navmenu"> { % comment % }
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                <ul>
+                    <li><a href="#hero" class="active">Home<br></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul> { % endcomment % }
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">GP</h1>
-        <span>.</span>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        {% comment %} <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          
-          <li><a href="#contact">Contact</a></li>
-        </ul> {% endcomment %}
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-      <div>
-      <a class="btn-getstarted" style="border-radius=20px;" href="{% url "login"%}">Connexion</a>
-      <a class="btn-getstarted" style="border-radius=20px;" href="{% url "register"%}">Inscrire</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="{% static "assets/img/hero-bg.jpg"%}" alt="" data-aos="fade-in">
-
-      <div class="container">
-
-        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-xl-6 col-lg-8">
-            <h2>Organisez Votre Journée avec GP<span>.</span></h2>
-            <p>Une application simple et puissante pour gérer vos tâches au quotidien</p>
-          </div>
-          
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav>
+            <div><a class="btn-getstarted" style="border-radius=20px;" href="{% url " login "%}">Connexion</a><a class="btn-getstarted" style="border-radius=20px;" href="{% url " register "%}">Inscrire</a></div>
         </div>
-
-        <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h3><a href="">Vue Globale</a></h3>
+    </header>
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background"><img src="{% static " assets/img/hero-bg.jpg "%}" alt="" data-aos="fade-in">
+            <div class="container">
+                <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-xl-6 col-lg-8">
+                        <h2>Organisez Votre Journée avec GP<span>.</span></h2>
+                        <p>Une application simple et puissante pour gérer vos tâches au quotidien</p>
+                    </div>
+                </div>
+                <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box"><i class="bi bi-binoculars"></i>
+                            <h3><a href="">Vue Globale</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box"><i class="bi bi-bullseye"></i>
+                            <h3><a href="">Objectifs du Jour</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box"><i class="bi bi-fullscreen-exit"></i>
+                            <h3><a href="">Tâches Prioritaires</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon-box"><i class="bi bi-card-list"></i>
+                            <h3><a href="">Liste Complète</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
+                        <div class="icon-box"><i class="bi bi-gem"></i>
+                            <h3><a href="">Succès Atteints</a></h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <i class="bi bi-bullseye"></i>
-              <h3><a href="">Objectifs du Jour</a></h3>
+        </section>
+        <!-- /Hero Section -->
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-1 order-lg-2"><img src="{% static " ./image/todo.jpg "%}" class="img-fluid" alt=""></div>
+                    <div class="col-lg-6 order-2 order-lg-1 content">
+                        <h3>Organisez vos journées efficacement</h3>
+                        <p class="fst-italic">Gérez vos tâches, atteignez vos objectifs et restez concentré grâce à une interface intuitive et des fonctionnalités puissantes. </p>
+                        <ul>
+                            <li><i class="bi bi-check2-all"></i><span>Ajoutez,
+modifiez et classez vos tâches par priorité ou deadline.</span></li>
+                            <li><i class="bi bi-check2-all"></i><span>Visualisez votre progression et cochez les objectifs atteints.</span></li>
+                            <li><i class="bi bi-check2-all"></i><span>Recevez des rappels et restez productif avec des notifications personnalisées.</span></li>
+                        </ul>
+                        <p>Simplifiez votre quotidien avec une solution pensée pour optimiser votre temps. Que vous soyez étudiant, professionnel ou entrepreneur, cette ToDo App s’adapte à votre rythme. </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <i class="bi bi-fullscreen-exit"></i>
-              <h3><a href="">Tâches Prioritaires</a></h3>
+        </section>
+        <!-- /About Section -->
+        <!-- Clients Section -->
+        <section id="clients" class="clients section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                            "loop": true,
+                            "speed": 600,
+                            "autoplay": {
+                                "delay": 5000
+                            },
+                            "slidesPerView": "auto",
+                            "pagination": {
+                                "el": ".swiper-pagination",
+                                "type": "bullets",
+                                "clickable": true
+                            },
+                            "breakpoints": {
+                                "320": {
+                                    "slidesPerView": 2,
+                                    "spaceBetween": 40
+                                },
+                                "480": {
+                                    "slidesPerView": 3,
+                                    "spaceBetween": 60
+                                },
+                                "640": {
+                                    "slidesPerView": 4,
+                                    "spaceBetween": 80
+                                },
+                                "992": {
+                                    "slidesPerView": 6,
+                                    "spaceBetween": 120
+                                }
+                            }
+                        }
+                    </script>
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="{% static " ./image/dynalist.png " %}" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static " ./image/Asana.jpg " %}" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static " ./image/Trello.jpg " %}" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static " ./image/Notion.jpg " %}" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static " ./image/taskFlow.jpg " %}" class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <i class="bi bi-card-list"></i>
-              <h3><a href="">Liste Complète</a></h3>
+        </section>
+        <!-- /Clients Section -->
+        <!-- Features Section -->
+        <section id="features" class="features section">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{% static 'assets/img/features-bg.jpg' %}" alt="Todo App Dashboard"></div>
+                    <div class="col-lg-6">
+                        <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200"><i class="bi bi-ui-checks-grid flex-shrink-0"></i>
+                            <div>
+                                <h4>Organisation simplifiée</h4>
+                                <p>Créez, classez et suivez vos tâches quotidiennes grâce à une interface intuitive et rapide.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300"><i class="bi bi-alarm flex-shrink-0"></i>
+                            <div>
+                                <h4>Rappels et alertes</h4>
+                                <p>Recevez des notifications précises pour chaque tâche à échéance ou priorité élevée.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400"><i class="bi bi-kanban flex-shrink-0"></i>
+                            <div>
+                                <h4>Vue Kanban et liste</h4>
+                                <p>Affichez vos tâches en mode liste ou par colonnes pour mieux visualiser l’état d’avancement.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500"><i class="bi bi-people flex-shrink-0"></i>
+                            <div>
+                                <h4>Travail collaboratif</h4>
+                                <p>Attribuez des tâches, discutez via commentaires, et suivez l’avancement en équipe.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="600"><i class="bi bi-bar-chart-line flex-shrink-0"></i>
+                            <div>
+                                <h4>Statistiques de productivité</h4>
+                                <p>Analysez vos performances avec des graphiques sur le nombre de tâches complétées, en attente, ou en retard.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="700"><i class="bi bi-cloud-arrow-up flex-shrink-0"></i>
+                            <div>
+                                <h4>Sauvegarde cloud automatique</h4>
+                                <p>Vos tâches sont synchronisées sur tous vos appareils avec sauvegarde automatique sécurisée.</p>
+                            </div>
+                        </div>
+                        <!-- End Features Item-->
+                    </div>
+        </section>
+        <!-- /Features Section -->
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Nos Fonctionnalités</h2>
+                <p>Découvrez ce que notre Todo App peut faire pour vous</p>
             </div>
-          </div>
-
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="icon-box">
-              <i class="bi bi-gem"></i>
-              <h3><a href="">Succès Atteints</a></h3>
+            <!-- End Section Title -->
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-activity"></i></div>
+                            <a href="task-tracking.html" class="stretched-link">
+                                <h3>Suivi des tâches</h3>
+                            </a>
+                            <p>Gardez une trace de toutes vos tâches quotidiennes avec des statuts personnalisés: en attente, en cours, terminée.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-broadcast"></i></div>
+                            <a href="notifications.html" class="stretched-link">
+                                <h3>Rappels & Notifications</h3>
+                            </a>
+                            <p>Ne ratez jamais une échéance grâce aux rappels automatiques et aux alertes configurables par l’utilisateur.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-easel"></i></div>
+                            <a href="project-organization.html" class="stretched-link">
+                                <h3>Organisation par projet</h3>
+                            </a>
+                            <p>Classez vos tâches par projets ou catégories pour une gestion plus claire et structurée de vos objectifs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-bounding-box-circles"></i></div>
+                            <a href="collaboration.html" class="stretched-link">
+                                <h3>Collaboration</h3>
+                            </a>
+                            <p>Travaillez en équipe en partageant vos tâches et projets avec vos collègues, amis ou partenaires.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+                            <a href="calendar-view.html" class="stretched-link">
+                                <h3>Vue calendrier</h3>
+                            </a>
+                            <p>Visualisez toutes vos tâches dans un calendrier intégré pour mieux planifier votre semaine ou votre mois.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="bi bi-chat-square-text"></i></div>
+                            <a href="notes-comments.html" class="stretched-link">
+                                <h3>Notes et commentaires</h3>
+                            </a>
+                            <p>Ajoutez des détails, des liens ou des commentaires à vos tâches pour un meilleur contexte et un suivi plus précis.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background"><img src="{% static " assets/img/cta-bg.jpg "%}" alt="">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>Commencez à Organiser Vos Tâches</h3>
+                            <p>Ne laissez plus vos tâches s'accumuler ! Commencez dès maintenant à gérer efficacement vos projets, tâches et rappels. Avec notre application, gardez le contrôle de votre emploi du temps et atteignez vos objectifs.</p>
+                            <a class="cta-btn" href="#">Essayez la Todo App</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Call To Action Section -->{ % comment % }
 
-        </div>
-        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portfolio</h2>
+                <p>Check our Portfolio</p>
+            </div>
+            <!-- End Section Title -->
+            <div class="container">
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-product">Card</li>
+                        <li data-filter=".filter-branding">Web</li>
+                    </ul>
+                    <!-- End Portfolio Filters -->
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-1.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-1.jpg "%}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-2.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 1</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-2.jpg "%}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-3.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 1</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-3.jpg "%}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-4.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-4.jpg "%}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-5.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 2</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-5.jpg "%}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-6.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 2</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-6.jpg "%}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-7.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 3</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-7.jpg "%}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-8.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Product 3</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-8.jpg "%}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"><img src="{% static " assets/img/masonry-portfolio/masonry-portfolio-9.jpg "%}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Branding 3</h4>
+                                <p>Lorem ipsum, dolor sit</p><a href="{% static " assets/img/masonry-portfolio/masonry-portfolio-9.jpg "%}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a
+                                    href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                    </div>
+                    <!-- End Portfolio Container -->
+                </div>
+            </div>
+        </section>
+        <!-- /Portfolio Section -->{ % endcomment % }
 
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="{% static "./image/todo.jpg"%}" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1 content">
-            <h3>Organisez vos journées efficacement</h3>
-            <p class="fst-italic">
-              Gérez vos tâches, atteignez vos objectifs et restez concentré grâce à une interface intuitive et des fonctionnalités puissantes.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-all"></i> <span>Ajoutez, modifiez et classez vos tâches par priorité ou deadline.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Visualisez votre progression et cochez les objectifs atteints.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Recevez des rappels et restez productif avec des notifications personnalisées.</span></li>
-            </ul>
-            <p>
-              Simplifiez votre quotidien avec une solution pensée pour optimiser votre temps. Que vous soyez étudiant, professionnel ou entrepreneur, cette ToDo App s’adapte à votre rythme.
-            </p>
-          </div>
-          
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4 align-items-center justify-content-between">
+                    <div class="col-lg-5"><img src="{% static 'assets/img/stats-img.jpg' %}" alt="Image statistiques Todo App" class="img-fluid"></div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold fs-2 mb-3">Gérez Vos Tâches Facilement</h3>
+                        <p>Découvrez comment notre Todo App aide des milliers d'utilisateurs à organiser leurs projets et à améliorer leur productivité au quotidien.
+                        </p>
+                        <div class="row gy-4">
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex"><i class="bi bi-emoji-smile flex-shrink-0"></i>
+                                    <div><span data-purecounter-start="0" data-purecounter-end="1050" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Utilisateurs Heureux</strong><span>qui gèrent leurs tâches efficacement</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Stats Item -->
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex"><i class="bi bi-journal-richtext flex-shrink-0"></i>
+                                    <div><span data-purecounter-start="0" data-purecounter-end="1890" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Tâches Complétées</strong><span>et projets accomplis avec succès</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Stats Item -->
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex"><i class="bi bi-headset flex-shrink-0"></i>
+                                    <div><span data-purecounter-start="0" data-purecounter-end="2574" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Heures Passées à Organiser</strong><span>tâches et rappels efficacement</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Stats Item -->
+                            <div class="col-lg-6">
+                                <div class="stats-item d-flex"><i class="bi bi-people flex-shrink-0"></i>
+                                    <div><span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p><strong>Travailleurs Acharnés</strong><span>utilisant notre Todo App chaque jour</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Stats Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Stats Section -->
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section dark-background"><img src="{% static " assets/img/testimonials-bg.jpg "%}" class="testimonials-bg" alt="">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                            "loop": true,
+                            "speed": 600,
+                            "autoplay": {
+                                "delay": 5000
+                            },
+                            "slidesPerView": "auto",
+                            "pagination": {
+                                "el": ".swiper-pagination",
+                                "type": "bullets",
+                                "clickable": true
+                            }
+                        }
+                    </script>
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 - Saul Goodman -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item"><img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder
+                                </h4>
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <p><i class="bi bi-quote quote-icon-left"></i><span>"Je suis bénit d'avoir trouvé cette application. Elle m'a non seulement aidé à organiser ma vie professionnelle mais aussi à mieux comprendre le chemin que Dieu me trace dans chaque décision que je prends. L'application est un véritable outil de sagesse pour moi, et je prie qu'elle continue de bénir ceux qui l'utilisent."</span>
+                                    <i
+                                        class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                        <!-- Testimonial 2 - Sara Wilsson -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item"><img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <p><i class="bi bi-quote quote-icon-left"></i><span>"En tant que créatrice, je me sens profondément connectée à l'inspiration divine chaque fois que je travaille sur cette application. Elle m’aide à exprimer la beauté de la création à travers mes designs. C’est comme si chaque clic était guidé par une force supérieure. Je suis reconnaissante pour cet outil."</span>
+                                    <i
+                                        class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                        <!-- Testimonial 3 - Jena Karlis -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item"><img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <p><i class="bi bi-quote quote-icon-left"></i><span>"Cette application m'a permis de gérer mon commerce avec une sérénité que je n'avais jamais connue auparavant. Grâce à son interface simple et son efficacité, je peux consacrer plus de temps à ma famille et à ma foi. Dieu bénisse chaque personne derrière cette merveilleuse application."</span>
+                                    <i
+                                        class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                        <!-- Testimonial 4 - Matt Brandon -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item"><img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <p><i class="bi bi-quote quote-icon-left"></i><span>"Dans mon travail en freelance, il est facile de se perdre dans les tâches quotidiennes et oublier l’essentiel. Mais cette application m’a permis de garder un équilibre, en me rappelant de rester centré sur mes valeurs spirituelles tout en étant productif. C’est une bénédiction pour moi."</span>
+                                    <i
+                                        class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                        <!-- Testimonial 5 - John Larson -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-item"><img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                                <div class="stars">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+        </section>
+        <!-- /Testimonials Section -->
+        <!-- Team Section -->
+        <section id="team" class="team section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Equipe</h2>
+                <p>Notre Equipe</p>
+            </div>
+            <!-- End Section Title -->
+            <style>
+                #admin img {
+                    height: 27rem;
                 }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            
-            <div class="swiper-slide"><img src="{% static "./image/dynalist.png" %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static "./image/Asana.jpg" %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static "./image/Trello.jpg" %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static "./image/Notion.jpg" %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static "./image/taskFlow.jpg" %}" class="img-fluid" alt=""></div>
-            
-          </div>
-          <div class="swiper-pagination"></div>
+                
+                #admin {
+                    margin: auto;
+                }
+            </style>
+            <div class="container" id="admin">
+                <div class="row gy-3">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="member-img"><img src="{% static " ./image/Administrator/Champy.jpg "%}" class="img-fluid" alt="">
+                                <div class="social"><a href=""><i class="bi bi-facebook"></i></a><a href=""><i class="bi bi-instagram"></i></a><a href=""><i class="bi bi-linkedin"></i></a></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>NDJONG Cedric</h4><span>Chef Executive Officier & Dev</span></div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-member">
+                            <div class="member-img"><img src="{% static './image/Administrator/Fotso_2.jpg'%}" class="img-fluid" alt="">
+                                <div class="social"><a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href="https://fork-timbale-e34.notion.site/FOTSO-KOUATCHOUANG-M-1c74b6adaab081a8b228ebb7e54fc3a9?pvs=73"><img src="{% static " ./image/notion_icon.png "%}" alt="Fotso Merveille"></img>
+                                    </a><a href=""><i class="bi bi-linkedin"></i></a></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Fotso Merveille</h4><span>Product Manager & Dev</span></div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-member">
+                            <div class="member-img"><img src="{% static " ./image/Administrator/Basile.jpg "%}" class="img-fluid" alt="">
+                                <div class="social"><a href=""><i class="bi bi-instagram"></i></a><a href=""><i class="bi bi-facebook"></i></a><a href=""><i class="bi bi-linkedin"></i></a></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>BASILEKIN JEAN</h4><span>CTO & Dev</span></div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+                    <!-- End Team Member -->
+                </div>
+            </div>
+        </section>
+        <!-- /Team Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Contactez-Nous</p>
+            </div>
+            <!-- End Section Title -->
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-4" data-aos="fade-up" data-aos-delay="200"><iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                        frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <!-- End Google Maps -->
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300"><i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>UY1, Yaounde, NY 535022</p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400"><i class="bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Call</h3>
+                                <p>+237 674 907 032</p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500"><i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@example.com</p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+                    </div>
+                    <div class="col-lg-8">
+                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+                                <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Your Name" required=""></div>
+                                <div class="col-md-6 "><input type="email" class="form-control" name="email" placeholder="Your Email" required=""></div>
+                                <div class="col-md-12"><input type="text" class="form-control" name="subject" placeholder="Subject" required=""></div>
+                                <div class="col-md-12"><textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea></div>
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Ton message a été envoyé. Nous vous remercions!</div><button type="submit">Soumettre</button></div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End Contact Form -->
+                </div>
+            </div>
+        </section>
+        <!-- /Contact Section -->
+    </main>
+    <footer id="footer" class="footer dark-background">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about"><a href="index.html" class="logo d-flex align-items-center"><span class="sitename">GP</span></a>
+                        <div class="footer-contact pt-3">
+                            <p>UY1</p>
+                            <p>Yaounde, Ynd 535022</p>
+                            <p class="mt-3"><strong>Phone:</strong><span>+237 674 907 032</span></p>
+                            <p><strong>Email:</strong><span>info@example.com</span></p>
+                        </div>
+                        <div class="social-links d-flex mt-4"><a href=""><i class="bi bi-facebook"></i></a><a href=""><i class="bi bi-instagram"></i></a><a href=""><i class="bi bi-linkedin"></i></a></div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul></ul>
+                    </div>
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i><a href="#">Web Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i><a href="#">Web Development</a></li>
+                            <li><i class="bi bi-chevron-right"></i><a href="#">Product Management</a></li>
+                            <li><i class="bi bi-chevron-right"></i><a href="#">Marketing</a></li>
+                            <li><i class="bi bi-chevron-right"></i><a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="{% static 'assets/img/features-bg.jpg' %}" alt="Todo App Dashboard">
-          </div>
-          
-          <div class="col-lg-6">
-  
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-ui-checks-grid flex-shrink-0"></i>
-              <div>
-                <h4>Organisation simplifiée</h4>
-                <p>Créez, classez et suivez vos tâches quotidiennes grâce à une interface intuitive et rapide.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-alarm flex-shrink-0"></i>
-              <div>
-                <h4>Rappels et alertes</h4>
-                <p>Recevez des notifications précises pour chaque tâche à échéance ou priorité élevée.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-kanban flex-shrink-0"></i>
-              <div>
-                <h4>Vue Kanban et liste</h4>
-                <p>Affichez vos tâches en mode liste ou par colonnes pour mieux visualiser l’état d’avancement.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-people flex-shrink-0"></i>
-              <div>
-                <h4>Travail collaboratif</h4>
-                <p>Attribuez des tâches, discutez via commentaires, et suivez l’avancement en équipe.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-bar-chart-line flex-shrink-0"></i>
-              <div>
-                <h4>Statistiques de productivité</h4>
-                <p>Analysez vos performances avec des graphiques sur le nombre de tâches complétées, en attente, ou en retard.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="700">
-              <i class="bi bi-cloud-arrow-up flex-shrink-0"></i>
-              <div>
-                <h4>Sauvegarde cloud automatique</h4>
-                <p>Vos tâches sont synchronisées sur tous vos appareils avec sauvegarde automatique sécurisée.</p>
-              </div>
-            </div><!-- End Features Item-->
-          
-          </div>
-          
-
-    </section><!-- /Features Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Nos Fonctionnalités</h2>
-        <p>Découvrez ce que notre Todo App peut faire pour vous</p>
-      </div><!-- End Section Title -->
-    
-      <div class="container">
-        <div class="row gy-4">
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="task-tracking.html" class="stretched-link">
-                <h3>Suivi des tâches</h3>
-              </a>
-              <p>Gardez une trace de toutes vos tâches quotidiennes avec des statuts personnalisés : en attente, en cours, terminée.</p>
+        <div class="copyright">
+            <div class="container text-center">
+                <p>© <span>Copyright</span><strong class="px-1 sitename">GP</strong><span>All Rights Reserved</span></p>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you've purchased the pro version. -->
+                    <!-- Licensing information: https: //bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>Distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
             </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="notifications.html" class="stretched-link">
-                <h3>Rappels & Notifications</h3>
-              </a>
-              <p>Ne ratez jamais une échéance grâce aux rappels automatiques et aux alertes configurables par l’utilisateur.</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="project-organization.html" class="stretched-link">
-                <h3>Organisation par projet</h3>
-              </a>
-              <p>Classez vos tâches par projets ou catégories pour une gestion plus claire et structurée de vos objectifs.</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="collaboration.html" class="stretched-link">
-                <h3>Collaboration</h3>
-              </a>
-              <p>Travaillez en équipe en partageant vos tâches et projets avec vos collègues, amis ou partenaires.</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="calendar-view.html" class="stretched-link">
-                <h3>Vue calendrier</h3>
-              </a>
-              <p>Visualisez toutes vos tâches dans un calendrier intégré pour mieux planifier votre semaine ou votre mois.</p>
-            </div>
-          </div>
-    
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="notes-comments.html" class="stretched-link">
-                <h3>Notes et commentaires</h3>
-              </a>
-              <p>Ajoutez des détails, des liens ou des commentaires à vos tâches pour un meilleur contexte et un suivi plus précis.</p>
-            </div>
-          </div>
-    
         </div>
-      </div>
-    </section>
-    
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="{% static "assets/img/cta-bg.jpg"%}" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Commencez à Organiser Vos Tâches</h3>
-              <p>Ne laissez plus vos tâches s'accumuler ! Commencez dès maintenant à gérer efficacement vos projets, tâches et rappels. Avec notre application, gardez le contrôle de votre emploi du temps et atteignez vos objectifs.</p>
-              <a class="cta-btn" href="#">Essayez la Todo App</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-
-    </section><!-- /Call To Action Section -->
-
-    {% comment %} <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Check our Portfolio</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-1.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-1.jpg"%}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-2.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-2.jpg"%}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-3.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-3.jpg"%}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-4.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-4.jpg"%}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-5.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-5.jpg"%}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-6.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-6.jpg"%}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-7.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-7.jpg"%}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-8.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-8.jpg"%}" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static "assets/img/masonry-portfolio/masonry-portfolio-9.jpg"%}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static "assets/img/masonry-portfolio/masonry-portfolio-9.jpg"%}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section --> {% endcomment %}
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-    
-        <div class="row gy-4 align-items-center justify-content-between">
-    
-          <div class="col-lg-5">
-            <img src="{% static 'assets/img/stats-img.jpg' %}" alt="Image statistiques Todo App" class="img-fluid">
-          </div>
-    
-          <div class="col-lg-6">
-    
-            <h3 class="fw-bold fs-2 mb-3">Gérez Vos Tâches Facilement</h3>
-            <p>
-              Découvrez comment notre Todo App aide des milliers d'utilisateurs à organiser leurs projets et à améliorer leur productivité au quotidien.
-            </p>
-    
-            <div class="row gy-4">
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1050" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Utilisateurs Heureux</strong> <span>qui gèrent leurs tâches efficacement</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1890" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Tâches Complétées</strong> <span>et projets accomplis avec succès</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-headset flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="2574" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Heures Passées à Organiser</strong> <span>tâches et rappels efficacement</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-people flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="350" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Travailleurs Acharnés</strong> <span>utilisant notre Todo App chaque jour</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-            </div>
-    
-          </div>
-    
-        </div>
-    
-      </div>
-    
-    </section><!-- /Stats Section -->
-    
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section dark-background">
-
-      <img src="{% static "assets/img/testimonials-bg.jpg"%}" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-  
-            <!-- Testimonial 1 - Saul Goodman -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Je suis bénit d'avoir trouvé cette application. Elle m'a non seulement aidé à organiser ma vie professionnelle mais aussi à mieux comprendre le chemin que Dieu me trace dans chaque décision que je prends. L'application est un véritable outil de sagesse pour moi, et je prie qu'elle continue de bénir ceux qui l'utilisent."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          
-            <!-- Testimonial 2 - Sara Wilsson -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"En tant que créatrice, je me sens profondément connectée à l'inspiration divine chaque fois que je travaille sur cette application. Elle m’aide à exprimer la beauté de la création à travers mes designs. C’est comme si chaque clic était guidé par une force supérieure. Je suis reconnaissante pour cet outil."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          
-            <!-- Testimonial 3 - Jena Karlis -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Cette application m'a permis de gérer mon commerce avec une sérénité que je n'avais jamais connue auparavant. Grâce à son interface simple et son efficacité, je peux consacrer plus de temps à ma famille et à ma foi. Dieu bénisse chaque personne derrière cette merveilleuse application."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          
-            <!-- Testimonial 4 - Matt Brandon -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Dans mon travail en freelance, il est facile de se perdre dans les tâches quotidiennes et oublier l’essentiel. Mais cette application m’a permis de garder un équilibre, en me rappelant de rester centré sur mes valeurs spirituelles tout en étant productif. C’est une bénédiction pour moi."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          
-            <!-- Testimonial 5 - John Larson -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-          
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section>
-    <!-- /Testimonials Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Equipe</h2>
-        <p>Notre Equipe</p>
-      </div><!-- End Section Title -->
-<style>
-  #admin img{
-    height:27rem;
-  }
-  #admin{
-    margin:auto;
-  }
-</style>
-      <div class="container" id="admin">
-
-        <div class="row gy-3">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static "./image/Administrator/Champy.jpg"%}" class="img-fluid" alt="">
-                <div class="social">
-                  
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>NDJONG Cedric</h4>
-                <span>Chef Executive Officier & Dev</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static './image/Administrator/Fotso_2.jpg'%}" class="img-fluid"  alt="">
-                <div class="social">
-                  
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href="https://fork-timbale-e34.notion.site/FOTSO-KOUATCHOUANG-M-1c74b6adaab081a8b228ebb7e54fc3a9?pvs=73"><img src="{% static "./image/notion_icon.png"%}" alt="Fotso Merveille" ></img></a>
-                  
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Fotso Merveille</h4>
-                <span>Product Manager & Dev</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static "./themekit/img/portfolio-8.jpg"%}" class="img-fluid" alt="">
-                <div class="social">
-
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>BASILEKIN JEAN</h4>
-                <span>CTO & Dev</span>
-              </div>
-            </div>
-          </div>
-         
-          <!-- End Team Member -->
-
-          <!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Contactez-Nous</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div><!-- End Google Maps -->
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>UY1, Yaounde, NY 535022</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call</h3>
-                <p>+237 674 907 032</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p>info@example.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Ton message a été envoyé. Nous vous remercions!</div>
-
-                  <button type="submit">Soumettre</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">GP</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>UY1</p>
-              <p>Yaounde, Ynd 535022</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+237 674 907 032</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <div class="container text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">GP</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-        </div>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static "assets/vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
-  <script src="{% static "assets/vendor/aos/aos.js"%}"></script>
-  <script src="{% static "assets/vendor/swiper/swiper-bundle.min.js"%}"></script>
-  <script src="{% static "assets/vendor/glightbox/js/glightbox.min.js"%}"></script>
-  <script src="{% static "assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"%}"></script>
-  <script src="{% static "assets/vendor/isotope-layout/isotope.pkgd.min.js"%}"></script>
-  <script src="{% static "assets/vendor/purecounter/purecounter_vanilla.js"%}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static "assets/js/main.js"%}"></script>
-
+    </footer>
+    <!-- Scroll Top --><a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="{% static " assets/vendor/bootstrap/js/bootstrap.bundle.min.js "%}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+    <script src="{% static " assets/vendor/aos/aos.js "%}"></script>
+    <script src="{% static " assets/vendor/swiper/swiper-bundle.min.js "%}"></script>
+    <script src="{% static " assets/vendor/glightbox/js/glightbox.min.js "%}"></script>
+    <script src="{% static " assets/vendor/imagesloaded/imagesloaded.pkgd.min.js "%}"></script>
+    <script src="{% static " assets/vendor/isotope-layout/isotope.pkgd.min.js "%}"></script>
+    <script src="{% static " assets/vendor/purecounter/purecounter_vanilla.js "%}"></script>
+    <!-- Main JS File -->
+    <script src="{% static " assets/js/main.js "%}"></script>
 </body>
 
 </html>
